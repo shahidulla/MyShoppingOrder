@@ -1,0 +1,74 @@
+﻿@model IEnumerable<MyShopingOrder.Models.ProductItems>
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Agent Supply Order</h2>
+<div style="overflow-x: auto;">
+    <table class="table" style="border: 1px solid #ddd; border-collapse: collapse; border-spacing: 0; width: 100%">
+        <thead class="thead-default">
+        <tr class="table-hover">
+            <th>
+                Product Image
+            </th>
+            <th>
+                Product Id
+            </th>
+            <th>
+                Product Description
+            </th>
+            <th>
+                Units
+            </th>
+            <th></th>
+        </tr>
+        @foreach (var item in Model)
+        {
+                <tr class="productItems">
+                    <td>
+                        <img src="@item.ImageUrl" alt="@item.ProductDescription" height="100">
+
+                    </td>
+                    <td class="productId">
+                        @Html.DisplayFor(modelItem => item.ProductId)
+
+                    </td>
+                    <td class="productDes">
+                        @Html.DisplayFor(modelItem => item.ProductDescription)
+                    </td>
+
+                    <td class="col-lg-1 col-md-2">
+                        <div class="input-group">
+                            <span class="input-group-btn">
+                                <button type="button" class="btn btn-default btn-minus">
+                                    <span class="glyphicon glyphicon-minus"></span>
+                                </button>
+                            </span>
+
+                            @Html.TextBoxFor(modelItem => item.Units, new { @class = "form-control", type = "number", id = "itemUnits" })
+                            <span class="input-group-btn">
+                                <button type="button" class="btn btn-default btn-plus">
+                                    <span class="glyphicon glyphicon-plus"></span>
+                                </button>
+                            </span>
+                        </div>
+                    </td>
+
+                    <td>
+                        <button type="submit" class="btn btn-primary btnAddorder" id="btnAddOrder">Add to Order List</button>
+                        @*<input type="button" value="Add to Order List" class="btn btn-primary btnAddorder" id="btnAddOrder">*@
+</td>
+                </tr>
+            }
+        
+
+    </table>
+
+    <button class="btn btn-primary" type="submit" id="btnPlaceOrder">
+        Place Order
+    </button>
+</div>
+<link href="~/Content/sweetalert.css" rel="stylesheet" />
+<script src="~/scripts/sweetalert.min.js"></script>
+<script src="~/scripts/PLS/AgentSupplyOrder.js"></script>
