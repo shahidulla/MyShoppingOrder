@@ -128,6 +128,11 @@
     <Content Include="Global.asax" />
     <Content Include="Images\logo.jpg" />
     <Content Include="Images\s-l500.jpg" />
+    <Content Include="pager\first.png" />
+    <Content Include="pager\last.png" />
+    <Content Include="pager\next.png" />
+    <Content Include="pager\pager.css" />
+    <Content Include="pager\prev.png" />
     <Content Include="scripts\ai.0.15.0-build58334.js" />
     <Content Include="scripts\ai.0.15.0-build58334.min.js" />
     <Content Include="fonts\glyphicons-halflings-regular.woff2" />
@@ -145,9 +150,16 @@
     <Content Include="scripts\jquery-3.1.1.min.js" />
     <Content Include="scripts\jquery-3.1.1.slim.js" />
     <Content Include="scripts\jquery-3.1.1.slim.min.js" />
+    <Content Include="scripts\jquery.tablesorter.min.js" />
+    <Content Include="scripts\jquery.tablesorter.pager.js" />
     <Content Include="scripts\modernizr-2.6.2.js" />
     <Content Include="scripts\PLS\AgentSupplyOrder.js" />
     <Content Include="scripts\sweetalert.min.js" />
+    <Content Include="sorter\asc.gif" />
+    <Content Include="sorter\bg.gif" />
+    <Content Include="sorter\desc.gif" />
+    <Content Include="sorter\style.css" />
+    <Content Include="tablesorter.txt" />
     <Content Include="Web.config" />
     <Content Include="Views\Home\Index.cshtml" />
   </ItemGroup>

@@ -1,7 +1,9 @@
 ﻿/// <reference path="../sweetalert.min.js" />
+/// <reference path="../jquery.tablesorter.min.js" />
 /// <reference path="~/scripts/jquery-3.1.1.intellisense.js" />
 $(document)
-    .ready(function() {
+    .ready(function () {
+        //$(".table.tablesorter").tablesorter();
         $(".btn-plus").on("click", function () {
 
             var currentRow = $(this).closest("tr");
@@ -21,7 +23,16 @@ $(document)
         $("#btnPlaceOrder")
             .on("click",
                 function () {
-                    ItemArray();
+                    var itemdata = ItemArray();
+                    var tablebody = "";
+                        for (var i = 0; i < itemdata.length; i++) {
+                            tablebody += "<tr><td>" + itemdata[i].ProductDescription + "</td><td>" + itemdata[i].Units + "</td></tr>";
+                        }
+                 
+                        
+                    $("#orderSummaryModal").modal("show");
+                    $(".tablebody").html(tablebody);
+
 
                 });
 
@@ -74,7 +85,11 @@ function ItemArray() {
                 ProductId: currrentRow.find("td:eq(1)").text(),
                 ProductDescription: currrentRow.find("td:eq(2)").text(),
                 Units: currrentRow.find("td:eq(3) input").val()
-                    }
-                    itemArry.push(itemArrayObj);
-                });
+            }
+            if (itemArrayObj.Units > 0) {
+                     itemArry.push(itemArrayObj);
+                 }
+                       
+    });
+    return itemArry;
 }
