@@ -152,6 +152,8 @@
     <Content Include="scripts\jquery-3.1.1.slim.min.js" />
     <Content Include="scripts\jquery.tablesorter.min.js" />
     <Content Include="scripts\jquery.tablesorter.pager.js" />
+    <Content Include="scripts\jquery.unobtrusive-ajax.js" />
+    <Content Include="scripts\jquery.unobtrusive-ajax.min.js" />
     <Content Include="scripts\modernizr-2.6.2.js" />
     <Content Include="scripts\PLS\AgentSupplyOrder.js" />
     <Content Include="scripts\sweetalert.min.js" />
@@ -184,6 +186,8 @@
     <Content Include="Views\Shared\_Layout.cshtml" />
     <Content Include="scripts\jquery-3.1.1.slim.min.map" />
     <Content Include="scripts\jquery-3.1.1.min.map" />
+    <Content Include="Views\Home\OrderDetails.cshtml" />
+    <Content Include="Views\Home\Order.cshtml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>

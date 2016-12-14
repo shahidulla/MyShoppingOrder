@@ -36,6 +36,15 @@ $(document)
 
                 });
 
+        $("#btnOrderHistory")
+            .on("click",
+                function () {
+                    $("#itemtable").hide();
+                    $("#btnOrderHistory").hide();
+                    $("#orderHistory").load("/Home/Order");
+
+                });
+
         $(document)
             .on("click",".btnEdit",
                 function () {
@@ -63,7 +72,7 @@ $(document)
                       currentRow.find("td:eq(4) button").prop("disabled", true);
                       currentRow.find("td:eq(3) button").prop("disabled", true);
                       currentRow.find("td:eq(3) input").prop("disabled", true);
-                      var r = $('<button type="submit" class="btn btn-primary btnEdit" name="btnEdit" id="btnEdit">Edit</button>');
+                      var r = $('<button type="submit" class="btn btn-primary btnEdit" title="Edit" name="btnEdit" id="btnEdit"><span class="glyphicon glyphicon-pencil"></span></button>');
                       currentRow.find("td:eq(4)").append(r);
 
                   } else {

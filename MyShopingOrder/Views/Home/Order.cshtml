@@ -1,0 +1,23 @@
+﻿
+@{
+    ViewBag.Title = "Order";
+}
+
+<h2>Order</h2>
+@using (Ajax.BeginForm("OrderDetails", "Home", new AjaxOptions
+{
+    HttpMethod = "POST",
+    InsertionMode = InsertionMode.Replace,
+    UpdateTargetId = "result"
+}))
+{
+    <div>
+        <input class="form-control" type="datetime" id="firstDate" name="firstDate">
+        <input class="form-control" type="datetime" id="lastDate" name="lastDate">
+    </div>
+    <button class="btn btn-primary" type="submit">Search</button>
+}
+
+
+<div id="result">
+</div>
