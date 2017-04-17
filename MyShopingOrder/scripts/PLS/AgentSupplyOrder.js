@@ -17,7 +17,7 @@ $(document)
                 $(this).parent().siblings("input").val(parseInt(currentVal) - 1);
             }
         });
-
+        //
         $("#btnPlaceOrder")
             .on("click",
                 function () {
